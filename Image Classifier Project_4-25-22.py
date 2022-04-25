@@ -587,8 +587,8 @@ torch.save(checkpoint, 'checkpoint.pth')
 
 
 
-def loading_checkpoint(file_path):
-   checkpoint = torch.load('file.pth') 
+def loading_value(file_path):
+   checkpoint = torch.load(file_path) 
    classifier = checkpoint['classifier']
    epochs = checkpoint['epochs']
    model = checkpoint['model')]
@@ -597,8 +597,8 @@ def loading_checkpoint(file_path):
    class _to_idx = checkpoint['class_to_idx']
    
    #model,_,_ = (classifier, epochs, ,model, optimizer) 
-   model.class_to_idx = checkpoint('class_to_idx') 
-   model.load_state_dict(checkpoint('state_dict'))
+   model.class_to_idx = class_to_idx 
+   model.load_state_dict(state_dict)
    
    return model
 
@@ -624,7 +624,7 @@ def loading_checkpoint(file_path):
 # In[1]:
 
 
-load_checkpoint = loading_checkpoint('checkpoint.pth')
+load_model = loading_value('checkpoint.pth')
 print(load_checkpoint)
 
 
